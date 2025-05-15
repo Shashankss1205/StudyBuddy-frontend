@@ -65,7 +65,7 @@ const StudyView: React.FC<StudyViewProps> = ({
   playbackRate,
   handlePlaybackRateChange,
 }) => {
-  const API_URL = 'http://localhost:5000'; // Add API_URL constant
+  const API_URL = 'https://studybuddy-backend-h2b4.onrender.com/'; // Add API_URL constant
   
   // Image to display (either data URL or server URL)
   // For first page, base64 data is sent directly, for other pages we need to use the URL

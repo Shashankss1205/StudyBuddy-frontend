@@ -24,7 +24,7 @@ const ActionButtons: React.FC<ActionButtonsProps> = ({
   // Handle download materials
   const handleDownload = () => {
     // Open the download endpoint in a new tab
-    window.open(`http://localhost:5000/download-materials/${pdfName}`, '_blank');
+    window.open(`https://studybuddy-backend-h2b4.onrender.com//download-materials/${pdfName}`, '_blank');
   };
 
   return (

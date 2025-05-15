@@ -3,7 +3,7 @@ import { User, LoginFormData, RegisterFormData, AuthState } from '../types';
 import axios from 'axios';
 
 // API URL
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+const API_URL = process.env.REACT_APP_API_URL || 'https://studybuddy-backend-h2b4.onrender.com/';
 
 // Local storage keys
 const TOKEN_KEY = 'studybuddy_token';

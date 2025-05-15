@@ -55,7 +55,7 @@ export const usePDFProcessing = () => {
       setLoadingExistingPDFs(true);
       console.log("Fetching existing PDFs from the server...");
       
-      const response = await axios.get('http://localhost:5000/existing-pdfs');
+      const response = await axios.get('https://studybuddy-backend-h2b4.onrender.com//existing-pdfs');
       const pdfs = response.data.pdfs || [];
       
       console.log(`Found ${pdfs.length} existing PDFs:`, pdfs);
@@ -70,7 +70,7 @@ export const usePDFProcessing = () => {
   const checkExistingPDF = async (fileName: string): Promise<{exists: boolean, versions?: string[], base_name?: string}> => {
     try {
       // Use the new endpoint that checks by filename
-      const response = await axios.get(`http://localhost:5000/check-pdf-by-filename/${encodeURIComponent(fileName)}`);
+      const response = await axios.get(`https://studybuddy-backend-h2b4.onrender.com//check-pdf-by-filename/${encodeURIComponent(fileName)}`);
       return response.data;
     } catch (error) {
       console.error('Error checking existing PDF:', error);
@@ -84,7 +84,7 @@ export const usePDFProcessing = () => {
       setShowPDFDialog(false);
       
       console.log(`Loading existing PDF: ${pdfNameToLoad}`);
-      const response = await axios.get<ApiResponse>(`http://localhost:5000/use-existing/${pdfNameToLoad}`);
+      const response = await axios.get<ApiResponse>(`https://studybuddy-backend-h2b4.onrender.com//use-existing/${pdfNameToLoad}`);
       
       // Process the response
       const { total_pages, pages, pdf_name } = response.data;
@@ -182,7 +182,7 @@ export const usePDFProcessing = () => {
 
     try {
       console.log("Uploading PDF to server...");
-      const response = await axios.post('http://localhost:5000/process-pdf', formData, {
+      const response = await axios.post('https://studybuddy-backend-h2b4.onrender.com//process-pdf', formData, {
         onUploadProgress: (progressEvent) => {
           const percentCompleted = Math.round((progressEvent.loaded / (progressEvent.total || 1)) * 100);
           console.log(`Upload Progress: ${percentCompleted}%`);

@@ -5,7 +5,7 @@ import { PageResult, ExistingPDF } from '../types';
 export type DifficultyLevel = 'beginner' | 'intermediate' | 'detailed';
 
 // API URL from environment variable or default to localhost
-const API_URL = 'http://localhost:5000';
+const API_URL = 'https://studybuddy-backend-h2b4.onrender.com/';
 
 // Define the structure expected by App.tsx
 export interface PDFResults {

@@ -50,7 +50,7 @@ import { useTheme } from './theme/ThemeProvider';
 import { useAuth } from './hooks/useAuth';
 
 // Add API_URL constant
-const API_URL = 'http://localhost:5000';
+const API_URL = 'https://studybuddy-backend-h2b4.onrender.com/';
 
 
 // Wrapper for audio component to handle type issues

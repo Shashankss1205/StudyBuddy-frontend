@@ -38,7 +38,7 @@ export const useAudio = (audioUrl: string): UseAudioResult => {
     if (!audioUrl) return;
     
     // Check if audio URL is a direct URL or needs the API base URL
-    const baseUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+    const baseUrl = process.env.REACT_APP_API_URL || 'https://studybuddy-backend-h2b4.onrender.com/';
     const fullAudioUrl = audioUrl.startsWith('http') 
       ? audioUrl 
       : `${baseUrl}${audioUrl.startsWith('/') ? '' : '/'}${audioUrl}`;

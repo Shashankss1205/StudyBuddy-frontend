@@ -3,7 +3,7 @@ import axios from 'axios';
 import { ChatMessage } from '../types';
 
 // API URL
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+const API_URL = process.env.REACT_APP_API_URL || 'https://studybuddy-backend-h2b4.onrender.com/';
 
 interface UseChatResult {
   showChatDialog: boolean;
